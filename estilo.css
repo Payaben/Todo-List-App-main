@@ -1,0 +1,303 @@
+/* Estilos generales */
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./img/create\ an\ instagram\ post\ 10.png");
+    background-size: cover; /* ajusta la imagen al tamaño de la pantalla */
+    background-repeat: no-repeat; /* evita que se repita la imagen */
+    background-attachment: fixed;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+
+   /* Añade los siguientes estilos para el cuerpo */
+
+   display :flex; /* hace que el cuerpo sea flexible */
+   flex-direction :column; /* ordena los elementos en columnas */
+   justify-content :space-between; /* distribuye el espacio entre los elementos */
+}
+
+header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1.5rem;
+    text-align: center;
+        
+
+   /* Añade los siguientes estilos para el encabezado */
+
+   background-color :rgba(0,0,0,0.5); /* cambia el color de fondo a negro con transparencia */
+   backdrop-filter :blur(10px); /* añade un efecto de desenfoque al fondo */
+   -webkit-backdrop-filter :blur(10px); /* añade un efecto de desenfoque al fondo */
+   position: sticky; 
+   top: 0;
+   z-index: 1;
+}
+
+header, 
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, 
+form button {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    font-size: 1.8rem;
+    border: none;
+    background: white;
+    border-radius: 2rem;
+
+   /* Añade los siguientes estilos para el input y el botón */
+
+   box-shadow : inset 0 0 10px rgba(0,0,0,0.1); /* añade una sombra interior a los elementos */
+}
+
+form button {
+    color: rgb(255, 200, 0);
+    background: white;
+    cursor: pointer;
+    transition: all 0.3 ease;
+    margin-left: 0.5rem;
+
+   /* Añade los siguientes estilos para el botón */
+
+   position :relative; /* hace que el botón sea relativo */
+   overflow :hidden; /* evita que el contenido se salga del borde */
+}
+
+form button:hover {
+    color: white;
+    background: rgb(255, 200, 0);
+}
+
+form button::before { /* crea un pseudo-elemento antes del botón */
+
+   content :""; /* le da un contenido vacío */
+   position :absolute; /* lo hace absoluto */
+   top :50%; /* lo posiciona en el centro vertical */
+   left :-100%; /* lo posiciona fuera del borde izquierdo */
+   width :100%; /* le da el mismo ancho que el botón */
+   height :100%; /* le da el mismo alto que el botón */
+   background-color :rgba(255,255,255,0.3); /* le da un color blanco con transparencia */
+   transform :translateY(-50%); /* lo centra verticalmente */
+   transition :all 0.3s ease; /* le añade una transición suave */
+
+}
+
+form button:hover::before { /* cambia el estilo del pseudo-elemento al pasar el cursor */
+
+   left :100%; /* lo mueve hacia la derecha hasta salir del borde */
+
+}
+
+.fa-plus-circle {
+    margin-top: 0.3rem;
+    margin-left: -8px;
+
+   /* Añade los siguientes estilos para el icono de añadir */
+
+   transform :scale(1); /* fija el tamaño inicial del icono */
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+
+   
+}
+
+.todo {
+    margin: 0.5rem;
+    padding-left: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 2rem;
+
+   
+   box-shadow : 0 0 10px rgba(0,0,0,0.1); 
+   overflow : hidden; 
+}
+
+.todo li {
+   
+   flex :1; 
+}
+
+.trash-btn, 
+.complete-btn {
+   
+   color :white; 
+   border :none; 
+   padding :1rem; 
+   cursor :pointer; 
+   font-size :1.5rem;
+
+   
+   width :4rem; 
+   height :100%; 
+   display :flex; 
+   justify-content :center; 
+   align-items :center;
+}
+
+.complete-btn {
+   background :rgb(255, 200, 0);
+}
+
+.trash-btn {
+   
+   border-top-right-radius :1.75rem; 
+   border-bottom-right-radius :1.75rem; 
+   background :rgb(171, 171, 171);
+}
+
+.todo-item {
+   
+   padding :0rem 0.5rem;
+
+   
+   text-align :center; 
+   text-transform :capitalize; 
+}
+
+.fa-trash, 
+.fa-check-circle {
+   
+   pointer-events :none;
+
+   
+   transform :scale(1); 
+}
+
+.completed {
+   
+   text-decoration :line-through; 
+   opacity :0.5;
+
+   
+   color :gray; 
+}
+
+.slide {
+   
+   transform :translateX(10rem); 
+   opacity :0;
+
+   
+   transition-delay :0.3s; 
+}
+
+select {
+   
+   -webkit-appearance :none; 
+   -moz-appearance :none; 
+   appearance :none; 
+   outline :none; 
+   border :none;
+
+   
+}
+
+.select {
+   
+   margin :1rem; 
+   position :relative; 
+   overflow :hidden; 
+   border-radius :50px;
+
+   
+}
+
+select {
+   
+   color :rgb(255, 200, 0); 
+   width :10rem; 
+   height :3.2rem; 
+   cursor :pointer; 
+   padding :1rem;
+
+   
+}
+
+.select::after {
+   
+   content :"\25BC"; 
+   position :absolute; 
+   background :rgb(255, 200, 0); 
+   top :0; 
+   right :0; 
+   padding :1rem; 
+   pointer-events :none; 
+   transition :all 0.3s ease;
+
+   
+}
+
+.select::hover::after {
+   
+   background :white; 
+   color :rgb(255, 200, 0);
+}
+
+/* Añade los siguientes estilos para el pie de página */
+
+footer { /* crea un elemento de pie de página */
+
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5); /* cambia el color de fondo a negro con transparencia */
+    backdrop-filter: blur(10px); /* añade un efecto de desenfoque al fondo */
+    padding: 20px;
+    color: white;
+}
+
+footer a { /* crea un enlace en el pie de página */
+
+    color: rgb(255, 200, 0); /* cambia el color del enlace a amarillo */
+    text-decoration: none; /* quita el subrayado del enlace */
+    margin-left: 10px; /* añade un espacio a la izquierda del enlace */
+}
+
+/* Añade los siguientes estilos para hacer responsive design sin media queries */
+
+body { /* usa la propiedad calc() para calcular el tamaño de los elementos según el ancho de la pantalla */
+
+    font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); /* calcula el tamaño de la fuente según una fórmula */
+}
+
+form input { /* usa la propiedad clamp() para limitar el tamaño del input según un rango */
+
+    width: clamp(200px, 50%, 300px); /* limita el ancho del input entre 200px y 300px, usando el 50% como valor inicial */
+}
+
+form button { /* usa la propiedad clamp() para limitar el tamaño del botón según un rango */
+
+    width: clamp(50px, 10%, 100px); /* limita el ancho del botón entre 50px y 100px, usando el 10% como valor inicial */
+}
