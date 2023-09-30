@@ -365,3 +365,74 @@ input::placeholder {
     background-position: left center;
     padding-left: 20px;
 }
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 1.2rem;
+        background-image: url("./img/create\ an\ instagram\ post\ 10.png");
+        background-size: cover; /* ajusta la imagen al tamaño de la pantalla */
+        background-repeat: no-repeat; /* evita que se repita la imagen */
+        background-attachment: fixed;
+        width: 100vw;
+    }
+
+    header {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    form input, 
+    form button {
+        padding: 0.3rem;
+        font-size: 1.5rem; 
+    }
+
+    .todo-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .todo-list {
+        width: 90%;
+        margin: 0.5rem;
+        padding: 0.5rem;
+        font-size: 0.5rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 1rem;
+        background-image: url("./img/create\ an\ instagram\ post\ 10.png");
+        background-size: cover; /* ajusta la imagen al tamaño de la pantalla */
+        background-repeat: no-repeat; /* evita que se repita la imagen */
+        background-attachment: fixed;
+        width: 100vw;
+    }
+
+    header {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    form input, 
+    form button {
+        padding: 0.3rem;
+        font-size: 1.5rem;
+    }
+
+    .todo-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .todo-list {
+        width: 90%;
+        margin: 0.5rem;
+        padding: 0.5rem;
+        font-size: 0.5rem;
+        text-align: center;
+    }
+}
