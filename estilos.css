@@ -1,4 +1,5 @@
 /* Estilos generales */
+
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -8,7 +9,11 @@ html{
     padding: 0;
     box-sizing: border-box;
 }
-
+:root {
+    --primary-color:  rgb(255, 200, 0);
+    --secondary-color: #fff;
+    --transition-duration: 0.3s;
+  }
 body {
     background-image: url("./img/create\ an\ instagram\ post\ 10.png");
     background-size: cover; /* ajusta la imagen al tamaño de la pantalla */
@@ -17,6 +22,11 @@ body {
     color: white;
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
+    overflow-x: hidden;
+    
+    
+    
+
 
    /* Añade los siguientes estilos para el cuerpo */
 
@@ -363,4 +373,45 @@ select {
  
      width: clamp(50px, 10%, 100px); /* limita el ancho del botón entre 50px y 100px, usando el 10% como valor inicial */
  }
- 
+ form .todo-input:focus {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    outline: none;
+    border: 2px solid var(--primary-color);
+    font-weight: bold;
+    transition: all var(--transition-duration) ease;
+  }
+  
+  form .todo-input:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition-duration) ease, background-color var(--transition-duration) ease;
+  }
+  /* Efecto de transición en el placeholder */
+input::placeholder {
+    color: transparent;
+    transition: all 0.3s ease;
+}
+input:focus::placeholder {
+    color: #fff;
+}
+
+/* Efecto de sombra en el placeholder */
+input::placeholder {
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Efecto de borde en el placeholder */
+input::placeholder {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Efecto de fondo en el placeholder */
+input::placeholder {
+    background-image: url('ruta/de/la/imagen');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 20px;
+}
