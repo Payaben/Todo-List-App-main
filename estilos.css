@@ -23,16 +23,9 @@ body {
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
-    
-    
-    
-
-
-   /* Añade los siguientes estilos para el cuerpo */
-
-   display :flex; /* hace que el cuerpo sea flexible */
-   flex-direction :column; /* ordena los elementos en columnas */
-   justify-content :space-between; /* distribuye el espacio entre los elementos */
+    display :flex; /* hace que el body sea flexible */
+    flex-direction :column; /* ordena los elementos en columnas */
+    justify-content :space-between; /* distribuye el espacio entre los elementos */
 }
 
 header {
@@ -40,23 +33,17 @@ header {
     font-weight: bold;
     padding: 1.5rem;
     text-align: center;
-        
+    background-color :rgba(0,0,0,0.5); /* cambia el color de fondo a negro con transparencia */
+    backdrop-filter :blur(10px); /* añade un efecto de desenfoque al fondo */
+    -webkit-backdrop-filter :blur(10px); /* añade un efecto de desenfoque al fondo */
+    position: sticky; 
+    top: 0;
+    z-index: 1;
 
-   /* Añade los siguientes estilos para el encabezado */
-
-   background-color :rgba(0,0,0,0.5); /* cambia el color de fondo a negro con transparencia */
-   backdrop-filter :blur(10px); /* añade un efecto de desenfoque al fondo */
-   -webkit-backdrop-filter :blur(10px); /* añade un efecto de desenfoque al fondo */
-   position: sticky; 
-   top: 0;
-   z-index: 1;
-
-   /* Añade los siguientes estilos para animar el encabezado */
-
-   animation-name :header-animation; /* le da un nombre a la animación */
-   animation-duration :3s; /* le da una duración a la animación */
-   animation-iteration-count :infinite; /* hace que la animación se repita infinitamente */
-   animation-direction :alternate; /* hace que la animación se invierta cada vez que se repite */
+    animation-name :header-animation; /* le da un nombre a la animación */
+    animation-duration :3s; /* le da una duración a la animación */
+    animation-iteration-count :infinite; /* hace que la animación se repita infinitamente */
+    animation-direction :alternate; /* hace que la animación se invierta cada vez que se repite */
 }
 
 @keyframes header-animation { /* define los pasos de la animación */
@@ -97,9 +84,7 @@ form button {
     background: white;
     border-radius: 2rem;
 
-   /* Añade los siguientes estilos para el input y el botón */
-
-   box-shadow : inset 0 0 10px rgba(0,0,0,0.1); /* añade una sombra interior a los elementos */
+    box-shadow : inset 0 0 10px rgba(0,0,0,0.1); /* añade una sombra interior a los elementos */
 }
 
 form button {
@@ -108,11 +93,8 @@ form button {
     cursor: pointer;
     transition: all 0.3 ease;
     margin-left: 0.5rem;
-
-   /* Añade los siguientes estilos para el botón */
-
-   position :relative; /* hace que el botón sea relativo */
-   overflow :hidden; /* evita que el contenido se salga del borde */
+    position :relative; /* hace que el botón sea relativo */
+    overflow :hidden; /* evita que el contenido se salga del borde */
 }
 
 form button:hover {
@@ -143,10 +125,7 @@ form button:hover::before { /* cambia el estilo del pseudo-elemento al pasar el 
 .fa-plus-circle {
     margin-top: 0.3rem;
     margin-left: -8px;
-
-   /* Añade los siguientes estilos para el icono de añadir */
-
-   transform :scale(1); /* fija el tamaño inicial del icono */
+    transform :scale(1); /* fija el tamaño inicial del icono */
 }
 
 .todo-container {
@@ -208,20 +187,7 @@ form button:hover::before { /* cambia el estilo del pseudo-elemento al pasar el 
     background-image: linear-gradient(to right top, #ffcc00, #ffc61a, #ffc033, #ffba4d, #ffb466); /* añade un gradiente al fondo del botón */
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-
-/* cambia el color de fondo a amarillo con gradiente */
-    
-  
-/* cambia el color de fondo a amarillo con gradiente */
-    
-  
-/* cambia el color de fondo a amarillo con gradiente */
-    
-  
-/* cambia el color de fondo a amarillo con gradiente */
-    
-  
+    background-attachment: fixed;  
 /* cambia el color de fondo a amarillo con gradiente */}
 
 .trash-btn {
@@ -233,19 +199,6 @@ form button:hover::before { /* cambia el estilo del pseudo-elemento al pasar el 
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
-/* cambia el color de fondo a gris con gradiente */
-    
-  
-/* cambia el color de fondo a gris con gradiente */
-    
-  
-/* cambia el color de fondo a gris con gradiente */
-    
-  
-/* cambia el color de fondo a gris con gradiente */
-    
-  
 /* cambia el color de fondo a gris con gradiente */}
 
 .todo-item {
@@ -335,11 +288,8 @@ select {
     background :white; 
     color :rgb(255, 200, 0);
  }
- 
- /* Añade los siguientes estilos para el pie de página */
- 
- footer { /* crea un elemento de pie de página */
- 
+  
+ footer {
      font-size: 1.2rem;
      display: flex;
      justify-content: center;
@@ -357,7 +307,7 @@ select {
      margin-left: 10px; /* añade un espacio a la izquierda del enlace */
  }
  
- /* Añade los siguientes estilos para hacer responsive design sin media queries */
+ /* Estilos para hacer responsive design sin media queries */
  
  body { /* usa la propiedad calc() para calcular el tamaño de los elementos según el ancho de la pantalla */
  
